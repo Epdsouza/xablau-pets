@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imagens/personagem_principal-removebg-preview.png">
+        <title>Xablau Pets</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="container_nav">
+                    <a href="index.html"> <img class="logo" src="imagens/ChatGPT Xablau.png" alt="Xablau Pets"></a>
+
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="navbar" id="navlinks">
+                        <a href="banho_e_tosa.html">Banho&Tosa</a>
+                        <a href="fale_conosco.html">Fale Conosco</a>
+                        <a href="sobre_a_empresa.html" class="ultimo link">Sobre a Empresa</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-paginicial">
+        
+            <div class="container-boasvindas">
+                <h1>Bem-vindo ao Xablau Pets!</h1>
+                <p>Seu pet merece o melhor!</p>
+            </div>
+
+            <!-- INÍCIO DO CARROSSEL -->
+            <div class="carousel">
+                <input type="radio" name="carousel" id="slide1" checked>
+                <input type="radio" name="carousel" id="slide2">
+                <input type="radio" name="carousel" id="slide3">
+                <input type="radio" name="carousel" id="slide4">
+
+
+                <div class="Slides">
+                    <div class="slide-item">
+                        <img src="imagens/carrossel_petshop_4.png" alt="Criança com Pet">
+                    </div>
+                    <div class="slide-item">
+                        <img src="imagens/carrossel_petshop_2.png" alt="Tosando o Pet">
+                    </div>
+                    <div class="slide-item">
+                        <img src="imagens/carrossel_petshop_5.png" alt="Pets Felizes">
+                    </div>
+                    <div class="slide-item">
+                        <img src="imagens/carrossel_petshop_1.png" alt="Pets Felizes">
+                    </div>
+                </div>
+
+                <div class="Navegação">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+            </div>
+
+        </div>
+        <!-- FIM DO CARROSSEL -->
+
+        <div class="pre-produtos">
+            <p>Aqui você encontrará uma variedade de produtos para cuidar do seu animal de estimação.</p>
+        </div>
+        
+        <div class="container-cards">
+            <div class="card-produto">
+                <img src="imagens/racao_caes_filhotes.png" alt="racao_Filhotes Felizes">
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Cachorros - Filhotes Felizes - 15 Kg</h3>
+                    <p>
+                        <span>R$139,90</span>
+                        <label>R$ 130,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <a href="xablaupower.html"><img src="imagens/racao_caes_xablau_power.png" alt="racao Xablau"></a>
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Cachorros - Xablau Power - 20 Kg</h3>
+                    <p>
+                        <span>R$139,90</span>
+                        <label>R$ 130,00</label>
+                    </p>
+                    <a href="xablaupower.html"><button type="button">Comprar</button></a>
+                </div>
+                </a>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/racao_caes_senior.png" alt="Sênior Feliz">
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Cachorros - Sênior Feliz - 20 Kg</h3>
+                    <p>
+                        <span>R$159,90</span>
+                        <label>R$ 145,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/racao_gatos_filhotes.png" alt="racao_Gatinhos Felizes">
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Gatos - Gatinhos Felizes - 10 Kg</h3>
+                    <p>
+                        <span>R$139,90</span>
+                        <label>R$ 130,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/racao_gatos_adultos.png" alt="racaogato_Adultos Saudáveis">
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Gatos - Adultos Saudáveis - 20 Kg</h3>
+                    <p>
+                        <span>R$139,90</span>
+                        <label>R$ 130,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/racao_gatos_senior.png" alt="racaogato_Sênior Saudável">
+                <div class="body-card-produto">
+                    <h3>Ração Premium P/Gatos - Sênior Saudável - 20 Kg</h3>
+                    <p>
+                        <span>R$159,90</span>
+                        <label>R$ 145,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/coleira_guia.png" alt="coleira_guia">
+                <div class="body-card-produto">
+                    <h3>Xablau Pets - Passeio Divertido</h3>
+                    <p>
+                        <span>R$45,90</span>
+                        <label>R$ 35,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/shampoo_condicionador.png" alt="ShampooEcond - Banho Feliz">
+                <div class="body-card-produto">
+                    <h3>Shampoos e Condicionadores - Xablau Pets - Banho Feliz</h3>
+                    <p>
+                        <span>R$40,00</span>
+                        <label>R$ 35,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/caixa_transporte.png" alt="Caixas de Transporte">
+                <div class="body-card-produto">
+                    <h3>Caixas de Transporte - Xablau Pets - Viagem Segura</h3>
+                    <p>
+                        <span>R$120,00</span>
+                        <label>R$ 85,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+                
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/arranhador_gatos.png" alt="Xablau Pets - Arranhador Divertido">
+                <div class="body-card-produto">
+                    <h3>Arranhadores para Gatos - Xablau Pets - Arranhador Divertido</h3>
+                    <p>
+                        <span>R$120,00</span>
+                        <label>R$ 85,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+                
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/brinquedo_interativo.png" alt="Xablau Pets - Brinquedo Interativo">
+                <div class="body-card-produto">
+                    <h3>Brinquedos Interativos - Xablau Pets - Brinquedo Interativo</h3>
+                    <p>
+                        <span>R$120,00</span>
+                        <label>R$ 85,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+                
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/cama_cobertor.png" alt="Xablau Pets - Passeio Divertido">
+                <div class="body-card-produto">
+                    <h3>Camas e Cobertores - Xablau Pets - Soninho Bom</h3>
+                    <p>
+                        <span>R$120,00</span>
+                        <label>R$ 85,00</label>
+                    </p>
+                    <button type="button">Comprar</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <section id="banho-tosa" class="section-content">
+            <a href="banho_e_tosa.html"><h2>Banho e Tosa</h2></a>
+            <p>Oferecemos serviços de banho e tosa para deixar seu pet sempre limpo e cheiroso!</p>
+        </section>
+
+        <section id="fale-conosco" class="section-content">
+            <a href="fale_conosco.html"><h2>Fale Conosco</h2></a>
+            <p>Entre em contato conosco para agendar um horário ou tirar dúvidas sobre nossos serviços.</p>
+        </section>
+
+        <section id="sobre-empresa" class="section-content">
+            <a href="sobre_a_empresa.html"><h2>Sobre a Empresa</h2></a>
+            <p>Conheça mais sobre a nossa história e missão de cuidar dos pets com amor e carinho.</p>
+        </section>
+
+        <div class="cotainer-footer">
+            <footer>
+                <p>&copy; 2023 Xablau Pets. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                var navLinks = document.getElementById("navlinks");
+                navLinks.classList.toggle("active");
+            }
+        </script>
+
+    </body>    
+</html>
+

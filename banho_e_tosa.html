@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banho e Tosa - Xablau Pets</title>
+    <link rel="icon" href="/imagens/personagem_principal-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <div class="container_nav">
+                <a href="index.html"> <img class="logo" src="imagens/ChatGPT Xablau.png" alt="Xablau Pets"></a>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="navbar" id="navlinks">
+                    <a href="banho_e_tosa.html">Banho&Tosa</a>
+                    <a href="fale_conosco.html">Fale Conosco</a>
+                    <a href="sobre_a_empresa.html" class="ultimo link">Sobre a Empresa</a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-banho-tosa">
+
+        <h1>Agendamento de Banho e Tosa</h1>
+        <p>Preencha o formulário abaixo para agendar o serviço de banho e tosa para o seu pet. Cuidamos do seu melhor amigo com todo carinho e profissionalismo!</p>
+
+        <div class="carousel">
+
+            <div class="Slides">
+                <div class="slide-item">
+                    <img src="imagens/loja_xablau_pets_3.png" alt="banho_e_tosa">
+                </div>
+                
+            </div>
+        </div>
+        
+        <form class="schedule-form" id="scheduleForm">
+            <label for="service">Serviço:</label>
+            <select id="service" name="service" required>
+                <option value="">Selecione o serviço</option>
+                <option value="Banho">Banho</option>
+                <option value="Tosa">Tosa</option>
+                <option value="Banho e Tosa">Banho e Tosa</option>
+            </select>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+
+        <div class="mensagem-confirmacao" id="confirmationMessage">
+            <p>Agendamento confirmado!</p>
+            <p>Serviço: <span id="confirmedService"></span></p>
+            <p>Data: <span id="confirmedDate"></span></p>
+            <p>Hora: <span id="confirmedTime"></span></p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-button">Voltar para a Página Inicial</a>
+
+    <footer class="cotainer-footer">
+        <p>&copy; 2023 Xablau Pets. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+        var navLinks = document.getElementById("navlinks");
+        navLinks.classList.toggle("active");
+        }
+
+        document.getElementById('scheduleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (service && date && time) {
+                document.getElementById('confirmedService').textContent = service;
+                document.getElementById('confirmedDate').textContent = new Date(date).toLocaleDateString('pt-BR');
+                document.getElementById('confirmedTime').textContent = time;
+                document.getElementById('confirmationMessage').style.display = 'block';
+                document.getElementById('scheduleForm').reset(); // Clear the form
+            } else {
+                alert('Por favor, preencha todos os campos para agendar o serviço.');
+            }
+        });
+    </script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,503 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho e Navegação */
+
+header {
+    background-color: #FDEFCA;
+    padding: 10px 0;
+    
+}
+
+.container_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    font-size:large;
+}
+
+.navbar a:hover {
+    color: #FF9F00;
+}
+
+/* Ícone do Menu Hambúrguer */
+.menu-icon {
+    display: none; /* Oculto por padrão em desktops */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Seção de Boas-Vindas */
+.container-boasvindas {
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+}
+.container-paginicial{
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #FFB01F;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    width: 100%; /* Usar 100% da largura */
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.Slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* 100% para cada slide * número de slides */
+}
+
+.Slides > div {
+    width: calc(100% / 4); /* Cada slide ocupa 1/3 da largura total */
+    flex-shrink: 0;
+}
+
+.Slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Navegação {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.Navegação label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Navegação label:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .Slides {
+    transform: translateX(0%);
+}
+#slide2:checked ~ .Slides {
+    transform: translateX(-25%); /* Mover 2/4 da largura total */
+}
+#slide3:checked ~ .Slides {
+    transform: translateX(-50%); /* Mover 3/4 da largura total */
+}
+#slide4:checked ~ .Slides {
+    transform: translateX(-75%); /* Mover 4/4 da largura total */
+}
+
+.pre-produtos{
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+}
+
+/* Cards */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Espaço entre os cards */
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 20px auto;
+}
+
+.card-produto {
+    width: 300px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+}
+.card-produto img {
+    width: 100%;
+    height: 300px; /* Altura ajustada para melhor consistência */
+    object-fit: cover;
+}
+
+.body-card-produto {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body-card-produto h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.body-card-produto p {
+    margin: 10px 0;
+}
+
+.body-card-produto span {
+    font-size: 14px;
+    color: #b3a8a8;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.body-card-produto label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.body-card-produto button {
+    width: 100%;
+    background-color: #FFB01F;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.body-card-produto button:hover {
+    background-color: #FF9F00;
+}
+
+.body-card-produto button:active {
+    transform: translateY(2px);
+}
+
+/* Rodapé */
+.cotainer-footer {
+    background-color: #FDEFCA;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+.navbar {
+    display: none; /* Ocultar barra de navegação em telas menores */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #FDEFCA;
+    position: absolute;
+    top: 120px; /* Ajustar com base na altura do cabeçalho */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.navbar.active {
+    display: flex; /* Mostrar quando ativo */
+}
+.navbar a {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar a:last-child {
+    border-bottom: none;
+}
+
+.menu-icon {
+    display: flex; /* Mostrar ícone do hambúrguer */
+}
+
+.container_nav {
+    padding: 0 15px;
+}
+
+.carousel {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.card-produto {
+    width: 90%; /* Tornar os cards mais largos em telas pequenas */
+}
+}
+
+/* INICIO SOBRE A EMPRESA */
+
+.container-sobreXablau {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.container-sobreXablau p {
+    line-height: 1.6;
+}
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    text-decoration: none;
+    color: #FFB01F;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #FFB01F;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.back-button:hover {
+    background-color: #FFB01F;
+    color: #fff;
+}
+/* FIM SOBRE A EMPRESA */
+
+.section-content a{
+    text-decoration:none;
+    color: black
+   
+}
+
+/* INICIO BANHO E TOSA*/
+
+.container-banho-tosa {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+        .schedule-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .schedule-form input[type="date"],
+        .schedule-form input[type="time"],
+        .schedule-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .schedule-form button {
+            background-color: #FFB01F;
+            color: #333;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .schedule-form button:hover {
+            background-color: #FF9F00;
+        }
+        .mensagem-confirmacao {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+/* FIM BANHO E TOSA*/
+
+/* INICIO FALE CONOSCO*/
+
+.container-faleconosco{
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .contact-form button {
+            background-color: #FFB01F;
+            color: #333;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #FF9F00;
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .social-media h2 {
+            color: #FFB01F;
+            margin-bottom: 15px;
+        }
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+
+/* FIM FALE CONOSCO*/
+
+/* INICIO COMPRA*/
+.container-compra{
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.product-image {
+    flex: 1;
+    min-width: 300px;
+}
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.product-details {
+    flex: 2;
+    min-width: 300px;
+}
+.product-details h1 {
+    color: #FFB01F;
+    margin-top: 0;
+}
+.product-details .price {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.product-details .old-price {
+    font-size: 1.2em;
+    color: #b3a8a8;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+.buy-button {
+    background-color: #FFB01F;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+/* FIM COMPRA*/
